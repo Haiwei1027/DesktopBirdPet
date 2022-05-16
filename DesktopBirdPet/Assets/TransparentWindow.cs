@@ -15,7 +15,7 @@ public class TransparentWindow : MonoBehaviour
     [DllImport("user32.dll")]
     private static extern IntPtr GetActiveWindow();
 
-    [DllImport("Dwmap.api")]
+    [DllImport("Dwmapi.dll")]
     private static extern uint DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS margins);
 
     private void Start()
