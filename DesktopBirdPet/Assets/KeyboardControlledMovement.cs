@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyboardControlledMovement : MonoBehaviour
@@ -25,11 +23,13 @@ public class KeyboardControlledMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        /*
         Vector3 direction = (view.right * input.x + Vector3.Cross(Vector3.down, view.right) * input.y).normalized;
         transform.position = transform.position + (direction * speed * Time.fixedDeltaTime);
         if (direction.magnitude != 0)
         {
             transform.forward = direction;
         }
+        */
     }
 }

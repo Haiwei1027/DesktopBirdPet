@@ -1,9 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pet : MonoBehaviour
 {
+
+    enum Decision{
+        WALK,
+        SIT
+    }
+
+    Vector3 distination;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +21,24 @@ public class Pet : MonoBehaviour
     void Update()
     {
         
+    }
+
+    bool isCurrentStateDone()
+    {
+        return false;
+    }
+
+    void FixedUpdate()
+    {
+        
+    }
+
+    IEnumerator DecisionMaking()
+    {
+        while (true)
+        {
+            isCurrentStateDone();
+            yield return new WaitForSeconds(3);
+        }
     }
 }
