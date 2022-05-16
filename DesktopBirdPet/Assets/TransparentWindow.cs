@@ -21,7 +21,7 @@ public class TransparentWindow : MonoBehaviour
     private static extern uint DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS margins);
 
     [DllImport("user32.dll")]
-    private static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);
+    private static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);   
 
     [DllImport("user32.dll")]
     static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
@@ -50,7 +50,7 @@ public class TransparentWindow : MonoBehaviour
         DwmExtendFrameIntoClientArea(hWnd, ref margins); //Remove the window frame
 
         SetClickthrough(true);
-
+        
         SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
 
         Application.runInBackground = true;
